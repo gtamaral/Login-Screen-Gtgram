@@ -1,7 +1,7 @@
 ::-webkit-scrollbar {
-    background-color:#000000;
+    background-color: var(--cor-cinza-claro);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: var(--cor-principal);
 }

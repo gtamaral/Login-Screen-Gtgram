@@ -1,1 +1,138 @@
 @import '../global/global.css';
+
+section.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 10px;
+}
+
+section.login .quadro {
+    background-color: var(--cor-branco);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    
+}
+section.login .quadro .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color:var(--cor-branco);
+    z-index: 2;
+    border-radius: 10px;
+    padding: 40px;
+
+}
+section.login .quadro .conteudo h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: var(--cor-principal);
+    letter-spacing: 10px;
+}
+section.login .quadro .conteudo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background-color: var(--cor-cinza-escuro);
+    line-height: 1.5;
+    padding-top: 8px;
+}
+
+section.login .quadro .conteudo label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    background-color: var(--cor-cinza-escuro);
+    width: 100%;
+    text-align: left;
+    margin: 20px 0 10px 0;
+}
+
+section.login .quadro .conteudo label span {
+    color: var(--cor-principal);
+}
+
+section.login .quadro .conteudo .input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+section.login .quadro .conteudo .input .bolinha {
+    width: 15px;
+    height: 15px;
+    background-color: var(--cor-principal);
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+section.login .quadro .conteudo .input:hover .bolinha {
+    transform: scale(0.8);
+    background-color: var(--cor-cinza);
+}
+section.login .quadro .conteudo .input input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: var(--cor-cinza-claro);
+    color: var(--cor-cinza);
+    width: 100%;
+    padding: 20px 20px 20px 50px;
+    border-radius: 10px;
+}
+section.login .quadro .conteudo .input input::placeholder {
+    color: #00000053;
+}
+section.login .quadro .faixa {
+    width: 5000px;
+    height: 200px;
+    background-color: var(--cor-principal);
+    position: absolute;
+    animation: rodarfaixa 20s linear infinite;
+    z-index: 1;
+    box-shadow: 0 0 30px 0 var(--cor-principal);
+}
+
+section.login .quadro .conteudo button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--cor-branco);
+    background-color: var(--cor-principal);
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    transition: all 0.5s;
+}
+section.login .quadro .conteudo button:hover {
+    background-color: var(--cor-cinza);
+}
+
+/* responsivo */
+@media screen and (max-width: 1000px) {
+    section.login .quadro .conteudo {
+        padding: 40px 20px;
+    }
+}
+@keyframes rodarfaixa {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
